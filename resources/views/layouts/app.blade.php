@@ -7,7 +7,7 @@
 </head>
 <body>
 @include('inc.topbar')
-<br />
+<br/>
 <div class="row">
     @include('inc.messages')
     @yield('content')

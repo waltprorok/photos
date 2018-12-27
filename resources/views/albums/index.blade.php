@@ -20,7 +20,8 @@
                             @else
                                 <div class='medium-4 columns'>
                                     <a href="/albums/{{$album->id}}">
-                                        <img class="thumbnail" width="300" src="storage/album_covers/{{$album->cover_image}}"
+                                        <img class="thumbnail" width="300"
+                                             src="storage/album_covers/{{$album->cover_image}}"
                                              alt="{{$album->name}}">
                                     </a>
                                     <br>

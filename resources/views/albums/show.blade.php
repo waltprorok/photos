@@ -4,7 +4,7 @@
     <h1>{{$album->name}}</h1>
     <a class="button secondary" href="/">Go Back</a>
     <a class="button" href="/photos/create/{{$album->id}}">Upload Photo To Album</a>
-    <hr />
+    <hr/>
 
     @if(count($album->photos) > 0)
         <?php
@@ -17,7 +17,8 @@
                     @if($i == $colcount)
                         <div class='medium-4 columns end'>
                             <a href="/photos/{{$photo->id}}">
-                                <img class="thumbnail" width="300" src="/storage/photos/{{$photo->album_id}}/{{$photo->photo}}"
+                                <img class="thumbnail"
+                                     src="/storage/photos/{{$photo->album_id}}/{{$photo->photo}}"
                                      alt="{{$photo->title}}">
                             </a>
                             <br>
@@ -25,7 +26,8 @@
                             @else
                                 <div class='medium-4 columns'>
                                     <a href="/photos/{{$photo->id}}">
-                                        <img class="thumbnail" width="300" src="/storage/photos/{{$photo->album_id}}/{{$photo->photo}}"
+                                        <img class="thumbnail"
+                                             src="/storage/photos/{{$photo->album_id}}/{{$photo->photo}}"
                                              alt="{{$photo->title}}">
                                     </a>
                                     <br>

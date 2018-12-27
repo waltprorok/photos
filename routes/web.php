@@ -20,7 +20,9 @@ Route::get('/albums', 'AlbumsController@index')->name('albums');
 Route::get('/albums/create', 'AlbumsController@create')->name('create');
 Route::get('/albums/{id}', 'AlbumsController@show')->name('show');
 Route::get('/photos/create/{id}', 'PhotosController@create')->name('photos');
+Route::get('/photos/{id}', 'PhotosController@show')->name('show');
 Route::post('/albums/store', 'AlbumsController@store')->name('create');
 Route::post('/photos/store', 'PhotosController@store')->name('store');
+Route::delete('/photos/{id}', 'PhotosController@destroy')->name('delete');
 
 
