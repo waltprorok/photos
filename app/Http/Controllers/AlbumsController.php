@@ -22,6 +22,7 @@ class AlbumsController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
+            'description' => 'required',
             'cover_image' => 'image|max:1999',
 
         ]);
@@ -45,7 +46,11 @@ class AlbumsController extends Controller
 
         $album->save();
         return redirect('/albums')->with('success', 'Album Created');
+    }
 
-
+    public function show($id)
+    {
+        $album = Album::with('Photos')->findOrFail($id);
+        return view('albums.show')->with('album', $album);
     }
 }
