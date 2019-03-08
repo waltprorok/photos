@@ -7,6 +7,6 @@
     {{Form::text('name', '', ['placeholder' => 'Album Name'])}}
     {{Form::textarea('description', '', ['placeholder' => 'Album Description'])}}
     {{Form::file('cover_image')}}
-    {{Form::submit('submit')}}
+    {{Form::submit('Submit')}}
     {!! Form::close() !!}
 @endsection

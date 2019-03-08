@@ -8,6 +8,7 @@
 <body>
 @include('inc.topbar')
 <br/>
+
 <div class="row">
     @include('inc.messages')
     @yield('content')
