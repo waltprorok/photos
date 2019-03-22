@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     @if(count($albums) > 0)
         <?php
         $colcount = count($albums);
@@ -13,7 +14,7 @@
                         @if($i == $colcount)
                             <div class='col-md-4 text-center'>
                                 <a href="/albums/{{$album->id}}">
-                                    <img class="thumbnail" width="300"
+                                    <img class="thumbnail" style="width:100%;"
                                          src="storage/album_covers/{{$album->cover_image}}"
                                          alt="{{$album->name}}">
                                 </a>
