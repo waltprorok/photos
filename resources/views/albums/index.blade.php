@@ -8,26 +8,26 @@
         ?>
         <div class="container">
             <div id="albums">
-                <div class="row text-center">
+                <div class="row">
                     @foreach($albums as $album)
                         @if($i == $colcount)
-                            <div class='medium-4 columns end'>
+                            <div class='col-md-4 text-center'>
                                 <a href="/albums/{{$album->id}}">
                                     <img class="thumbnail" width="300"
                                          src="storage/album_covers/{{$album->cover_image}}"
                                          alt="{{$album->name}}">
                                 </a>
                                 <br>
-                                <h4>{{$album->name}}</h4>
+                                <h4 class="text-center">{{$album->name}}</h4>
                                 @else
-                                    <div class='medium-4 columns'>
+                                    <div class='col-md-4 text-center'>
                                         <a href="/albums/{{$album->id}}">
                                             <img class="thumbnail" width="300"
                                                  src="storage/album_covers/{{$album->cover_image}}"
                                                  alt="{{$album->name}}">
                                         </a>
                                         <br>
-                                        <h4>{{$album->name}}</h4>
+                                        <h4 class="text-center">{{$album->name}}</h4>
                                         @endif
                                         @if($i % 3 == 0)
                                     </div></div>

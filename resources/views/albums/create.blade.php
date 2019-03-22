@@ -2,11 +2,25 @@
 
 @section('content')
 
-    <h3>Create Album</h3>
-    {!! Form::open(['action' => 'AlbumsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-    {{Form::text('name', '', ['placeholder' => 'Album Name'])}}
-    {{Form::textarea('description', '', ['placeholder' => 'Album Description'])}}
-    {{Form::file('cover_image')}}
-    {{Form::submit('Submit')}}
-    {!! Form::close() !!}
+    <div class="container">
+        <h3>Create Album</h3>
+        <div class="form-group">
+            {!! Form::open(['action' => 'AlbumsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+        </div>
+        <div class="form-group">
+            {{Form::text('name', '', ['placeholder' => 'Album Name', 'class' => 'form-control'])}}
+        </div>
+        <div class="form-group">
+            {{Form::textarea('description', '', ['placeholder' => 'Album Description', 'class' => 'form-control'])}}
+        </div>
+        <div class="form-group">
+            {{Form::file('cover_image')}}
+        </div>
+        <div class="form-group col-md-2">
+            {{Form::submit('Submit', ['class' => 'form-control btn-primary'])}}
+        </div>
+        <div class="form-group">
+            {!! Form::close() !!}
+
+        </div>
 @endsection
