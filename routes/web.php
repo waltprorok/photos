@@ -15,9 +15,11 @@
     return view('welcome');
 });*/
 
+Auth::routes();
+
 Route::get('/', 'AlbumsController@index')->name('index');
 Route::get('/albums', 'AlbumsController@index')->name('albums');
-Route::get('/albums/create', 'AlbumsController@create')->name('create');
+Route::get('/albums/create', 'AlbumsController@create')->name('creates');
 Route::get('/albums/{id}', 'AlbumsController@show')->name('show');
 Route::get('/photos/create/{id}', 'PhotosController@create')->name('photos');
 Route::get('/photos/{id}', 'PhotosController@show')->name('show');
