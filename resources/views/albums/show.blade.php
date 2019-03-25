@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1>{{$album->name}}</h1>
-        <a class="btn btn-info" href="/">Go Back</a>
+        <a class="btn btn-default" href="/">Go Back</a>
         <a class="btn btn-primary" href="/photos/create/{{$album->id}}">Upload Photo To Album</a>
         <hr/>
 
