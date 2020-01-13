@@ -15,8 +15,7 @@
                             <div class='col-md-4 text-center'>
                                 <a href="/albums/{{$album->id}}">
                                     <img class="thumbnail" style="width:100%;"
-                                         src="storage/album_covers/{{$album->cover_image}}"
-                                         alt="{{$album->name}}">
+                                         src="storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
                                 </a>
                                 <br>
                                 <h4 class="text-center">{{$album->name}}</h4>
