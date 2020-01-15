@@ -34,8 +34,9 @@
                                         <br>
                                         <h4 class="text-center">{{$photo->title}}</h4>
                                         @endif
-                                        @if($i % 3 == 0)
-                                    </div></div>
+                                        @if($i % 4 == 0)
+                                    </div>
+                            </div>
                             <div class="row text-center">
                                 @else
                             </div>
